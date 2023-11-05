@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Video Comment Rating</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Youtube Video Comment Rating</h1>
+        <form method="POST">
+            <div class="form">
+                <label for="url" class="label">URL</label>
+                <input type="text" id="url" name="url" placeholder="url">
+                <button class="btn" type="submit">Enter</button>
+            </div>
+        </form>
+        
+            {% if rating %}
+                {% if rating > 0.75 %}
+                    <div class="rating green">
+                        <div class="feedback white-text">Excellent</div>
+                        <div class="value white-text">{{rating}}</div>
+                    </div>
+                {% elif rating > 0.5 %}
+                    <div class="rating yellow">
+                        <div class="feedback white-text">Good</div>
+                        <div class="value white-text">{{rating}}</div>
+                    </div>
+                {% elif rating > 0.25 %}
+                    <div class="rating red">
+                        <div class="feedback white-text">Bad</div>
+                        <div class="value white-text">{{rating}}</div>
+                    </div>
+                {% else %}
+                    <div class="rating gray">
+                        <div class="feedback white-text">Terrible</div>
+                        <div class="value white-text">{{rating}}</div>
+                    </div>
+                {% endif %}
+            {% else %}
+                <div class="rating">
+                    <div class="feedback">Enter URL</div>
+                </div>
+            {% endif %}
+    </div>
+</body>
+</html>
