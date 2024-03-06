@@ -1,11 +1,11 @@
 import googleapiclient.discovery
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 import os
 
-load_dotenv()
+# load_dotenv()
 
 # Replace with your own API key
-API_KEY = os.getenv("API_KEY")
+API_KEY = "AIzaSyCtMFw9mM4gfrcLb0BqogkOZbZfoO56t-s"
 VIDEO_ID = 'P8p3zXSzY4c'
 
 # Create a YouTube API client
