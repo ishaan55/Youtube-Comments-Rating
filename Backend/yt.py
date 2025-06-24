@@ -1,14 +1,12 @@
 import googleapiclient.discovery
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 import os
 
-# load_dotenv()
+load_dotenv()
 
-# Replace with your own API key
-API_KEY = "AIzaSyCtMFw9mM4gfrcLb0BqogkOZbZfoO56t-s"
+API_KEY = os.getenv('GOOGLE_API_KEY')
 VIDEO_ID = 'P8p3zXSzY4c'
 
-# Create a YouTube API client
 youtube = googleapiclient.discovery.build('youtube', 'v3', developerKey=API_KEY)
 
 # Get comments for the video
