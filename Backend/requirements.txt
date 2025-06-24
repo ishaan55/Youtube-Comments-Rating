@@ -4,5 +4,4 @@ nltk
 numpy
 pandas
 python-dotenv
-tensorflow==2.13.0rc0
-tensorflow_macos==2.13.0rc0
+tensorflow==2.13.0
