@@ -1,4 +1,6 @@
 Flask
+gunicorn
+flask-cors
 google_api_python_client
 nltk
 numpy
